@@ -1,0 +1,50 @@
+[2025-02-17T07:51:57.331+0000] {taskinstance.py:1171} INFO - Dependencies all met for <TaskInstance: ml_pipeline.load manual__2025-02-17T07:51:44.660586+00:00 [queued]>
+[2025-02-17T07:51:57.350+0000] {taskinstance.py:1171} INFO - Dependencies all met for <TaskInstance: ml_pipeline.load manual__2025-02-17T07:51:44.660586+00:00 [queued]>
+[2025-02-17T07:51:57.351+0000] {taskinstance.py:1368} INFO - 
+--------------------------------------------------------------------------------
+[2025-02-17T07:51:57.352+0000] {taskinstance.py:1369} INFO - Starting attempt 1 of 1
+[2025-02-17T07:51:57.353+0000] {taskinstance.py:1370} INFO - 
+--------------------------------------------------------------------------------
+[2025-02-17T07:51:57.375+0000] {taskinstance.py:1389} INFO - Executing <Task(PythonOperator): load> on 2025-02-17 07:51:44.660586+00:00
+[2025-02-17T07:51:57.389+0000] {standard_task_runner.py:52} INFO - Started process 1962 to run task
+[2025-02-17T07:51:57.392+0000] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'ml_pipeline', 'load', 'manual__2025-02-17T07:51:44.660586+00:00', '--job-id', '19', '--raw', '--subdir', 'DAGS_FOLDER/DAG-fraud.py', '--cfg-path', '/tmp/tmpm024d3rf', '--error-file', '/tmp/tmpzh7218g4']
+[2025-02-17T07:51:57.394+0000] {standard_task_runner.py:80} INFO - Job 19: Subtask load
+[2025-02-17T07:51:57.485+0000] {task_command.py:371} INFO - Running <TaskInstance: ml_pipeline.load manual__2025-02-17T07:51:44.660586+00:00 [running]> on host 925d9315849a
+[2025-02-17T07:51:57.616+0000] {taskinstance.py:1581} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=group1
+AIRFLOW_CTX_DAG_ID=ml_pipeline
+AIRFLOW_CTX_TASK_ID=load
+AIRFLOW_CTX_EXECUTION_DATE=2025-02-17T07:51:44.660586+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2025-02-17T07:51:44.660586+00:00
+[2025-02-17T07:51:58.047+0000] {base.py:68} INFO - Using connection ID 'postgres_***' for task execution.
+[2025-02-17T07:51:58.065+0000] {taskinstance.py:1902} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.9/site-packages/pandas/core/indexes/base.py", line 3621, in get_loc
+    return self._engine.get_loc(casted_key)
+  File "pandas/_libs/index.pyx", line 136, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas/_libs/index.pyx", line 163, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas/_libs/hashtable_class_helper.pxi", line 5198, in pandas._libs.hashtable.PyObjectHashTable.get_item
+  File "pandas/_libs/hashtable_class_helper.pxi", line 5206, in pandas._libs.hashtable.PyObjectHashTable.get_item
+KeyError: 'id'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/operators/python.py", line 171, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/operators/python.py", line 189, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/DAG-fraud.py", line 99, in load_data
+    (row['id'], row['prediction'])
+  File "/home/airflow/.local/lib/python3.9/site-packages/pandas/core/series.py", line 958, in __getitem__
+    return self._get_value(key)
+  File "/home/airflow/.local/lib/python3.9/site-packages/pandas/core/series.py", line 1069, in _get_value
+    loc = self.index.get_loc(label)
+  File "/home/airflow/.local/lib/python3.9/site-packages/pandas/core/indexes/base.py", line 3623, in get_loc
+    raise KeyError(key) from err
+KeyError: 'id'
+[2025-02-17T07:51:58.087+0000] {taskinstance.py:1407} INFO - Marking task as FAILED. dag_id=ml_pipeline, task_id=load, execution_date=20250217T075144, start_date=20250217T075157, end_date=20250217T075158
+[2025-02-17T07:51:58.104+0000] {standard_task_runner.py:92} ERROR - Failed to execute job 19 for task load ('id'; 1962)
+[2025-02-17T07:51:58.132+0000] {local_task_job.py:156} INFO - Task exited with return code 1
+[2025-02-17T07:51:58.175+0000] {local_task_job.py:279} INFO - 0 downstream tasks scheduled from follow-on schedule check

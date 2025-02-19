@@ -1,0 +1,24 @@
+[2025-02-17T08:12:27.140+0000] {taskinstance.py:1171} INFO - Dependencies all met for <TaskInstance: ml_pipeline.predict manual__2025-02-17T08:12:19.690027+00:00 [queued]>
+[2025-02-17T08:12:27.160+0000] {taskinstance.py:1171} INFO - Dependencies all met for <TaskInstance: ml_pipeline.predict manual__2025-02-17T08:12:19.690027+00:00 [queued]>
+[2025-02-17T08:12:27.160+0000] {taskinstance.py:1368} INFO - 
+--------------------------------------------------------------------------------
+[2025-02-17T08:12:27.161+0000] {taskinstance.py:1369} INFO - Starting attempt 1 of 1
+[2025-02-17T08:12:27.162+0000] {taskinstance.py:1370} INFO - 
+--------------------------------------------------------------------------------
+[2025-02-17T08:12:27.184+0000] {taskinstance.py:1389} INFO - Executing <Task(PythonOperator): predict> on 2025-02-17 08:12:19.690027+00:00
+[2025-02-17T08:12:27.195+0000] {standard_task_runner.py:52} INFO - Started process 2415 to run task
+[2025-02-17T08:12:27.198+0000] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'ml_pipeline', 'predict', 'manual__2025-02-17T08:12:19.690027+00:00', '--job-id', '30', '--raw', '--subdir', 'DAGS_FOLDER/DAG-fraud.py', '--cfg-path', '/tmp/tmpcgjdyz44', '--error-file', '/tmp/tmpx7ddwwg8']
+[2025-02-17T08:12:27.199+0000] {standard_task_runner.py:80} INFO - Job 30: Subtask predict
+[2025-02-17T08:12:27.295+0000] {task_command.py:371} INFO - Running <TaskInstance: ml_pipeline.predict manual__2025-02-17T08:12:19.690027+00:00 [running]> on host 925d9315849a
+[2025-02-17T08:12:27.391+0000] {taskinstance.py:1581} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=group1
+AIRFLOW_CTX_DAG_ID=ml_pipeline
+AIRFLOW_CTX_TASK_ID=predict
+AIRFLOW_CTX_EXECUTION_DATE=2025-02-17T08:12:19.690027+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2025-02-17T08:12:19.690027+00:00
+[2025-02-17T08:12:28.453+0000] {DAG-fraud.py:65} INFO - Prediction successful.
+[2025-02-17T08:12:28.455+0000] {python.py:173} INFO - Done. Returned value was: None
+[2025-02-17T08:12:28.472+0000] {taskinstance.py:1407} INFO - Marking task as SUCCESS. dag_id=ml_pipeline, task_id=predict, execution_date=20250217T081219, start_date=20250217T081227, end_date=20250217T081228
+[2025-02-17T08:12:28.501+0000] {local_task_job.py:156} INFO - Task exited with return code 0
+[2025-02-17T08:12:28.552+0000] {local_task_job.py:279} INFO - 1 downstream tasks scheduled from follow-on schedule check

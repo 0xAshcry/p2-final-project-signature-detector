@@ -1,0 +1,20 @@
+[2025-02-18T04:53:37.569+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-02-18T04:53:37.605+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: ml_pipeline.extract manual__2025-02-18T04:53:33.337190+00:00 [queued]>
+[2025-02-18T04:53:37.618+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: ml_pipeline.extract manual__2025-02-18T04:53:33.337190+00:00 [queued]>
+[2025-02-18T04:53:37.619+0000] {taskinstance.py:2867} INFO - Starting attempt 1 of 1
+[2025-02-18T04:53:37.643+0000] {taskinstance.py:2890} INFO - Executing <Task(PythonOperator): extract> on 2025-02-18 04:53:33.337190+00:00
+[2025-02-18T04:53:37.694+0000] {standard_task_runner.py:72} INFO - Started process 781 to run task
+[2025-02-18T04:53:37.704+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'ml_pipeline', 'extract', 'manual__2025-02-18T04:53:33.337190+00:00', '--job-id', '93', '--raw', '--subdir', 'DAGS_FOLDER/DAG-fraud.py', '--cfg-path', '/tmp/tmpzdosu1_w']
+[2025-02-18T04:53:37.725+0000] {standard_task_runner.py:105} INFO - Job 93: Subtask extract
+[2025-02-18T04:53:38.293+0000] {task_command.py:467} INFO - Running <TaskInstance: ml_pipeline.extract manual__2025-02-18T04:53:33.337190+00:00 [running]> on host 8538735272b1
+[2025-02-18T04:53:38.496+0000] {taskinstance.py:3134} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='group1' AIRFLOW_CTX_DAG_ID='ml_pipeline' AIRFLOW_CTX_TASK_ID='extract' AIRFLOW_CTX_EXECUTION_DATE='2025-02-18T04:53:33.337190+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-02-18T04:53:33.337190+00:00'
+[2025-02-18T04:53:38.501+0000] {taskinstance.py:732} INFO - ::endgroup::
+[2025-02-18T04:53:38.603+0000] {base.py:84} INFO - Retrieving connection 'postgres_***'
+[2025-02-18T04:53:38.785+0000] {logging_mixin.py:190} WARNING - /home/***/.local/lib/python3.9/site-packages/pandas/io/sql.py:761 UserWarning: pandas only support SQLAlchemy connectable(engine/connection) ordatabase string URI or sqlite3 DBAPI2 connectionother DBAPI2 objects are not tested, please consider using SQLAlchemy
+[2025-02-18T04:53:40.355+0000] {DAG-fraud.py:42} INFO - Data extraction successful.
+[2025-02-18T04:53:40.361+0000] {python.py:240} INFO - Done. Returned value was: None
+[2025-02-18T04:53:40.406+0000] {taskinstance.py:341} INFO - ::group::Post task execution logs
+[2025-02-18T04:53:40.409+0000] {taskinstance.py:353} INFO - Marking task as SUCCESS. dag_id=ml_pipeline, task_id=extract, run_id=manual__2025-02-18T04:53:33.337190+00:00, execution_date=20250218T045333, start_date=20250218T045337, end_date=20250218T045340
+[2025-02-18T04:53:40.586+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-02-18T04:53:40.784+0000] {taskinstance.py:3901} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-02-18T04:53:40.788+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

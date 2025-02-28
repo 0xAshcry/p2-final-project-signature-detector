@@ -122,10 +122,10 @@ Below are key insights derived from our model evaluations:
 ## Business Impact
 FraudProof provides two layers of fraud prevention:
 
-✅ Real-time monitoring of transaction fraud.
-✅ Signature authentication to prevent document forgery.
-✅ Continuous model improvement for evolving fraud patterns.
-✅ Scalable architecture to handle large transaction volumes.
+✅ Real-time monitoring of transaction fraud.<br>
+✅ Signature authentication to prevent document forgery.<br>
+✅ Continuous model improvement for evolving fraud patterns.<br>
+✅ Scalable architecture to handle large transaction volumes.<br>
 
 By implementing machine learning-driven fraud detection and computer vision-based signature verification, financial institutions can prevent fraudulent transactions, reduce losses, and increase customer trust.
 

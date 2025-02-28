@@ -1,2 +1,1 @@
-URL Deployment: https://huggingface.co/spaces/liakurniawati507/MilestonesPhase1 
 URL Dataset : https://www.kaggle.com/datasets/jainilcoder/online-payment-fraud-detection
